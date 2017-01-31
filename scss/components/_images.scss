@@ -1,0 +1,22 @@
+img{
+  max-width: 100%;
+  margin-bottom: em(24px);
+}
+
+.img {
+	&-wrap{
+		border: 1px solid palette(grey, x-light);
+		padding: em(12px);
+	}
+  &-avatar{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 100%;
+	}
+	&-hero {
+		@include mq(medium) {
+			margin-bottom: em(42px);
+		}
+	}
+}

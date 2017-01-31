@@ -1,0 +1,48 @@
+//navbar
+
+%link{
+  color: palette(grey);
+  font-size: em(18px);
+  font-weight: $font-weight-light;
+  padding: em(8px, 18px);
+  text-decoration: none;
+
+}
+
+%item{
+  display: inline-block;
+  margin: 0 em(12px);
+  @include mq(small){
+    display: block;
+    padding: em(14px);
+		border-bottom: 1px solid white;
+		background: palette(grey, xx-light);
+		border-radius: $br;
+  };
+}
+
+.menu{
+	text-align: center;
+	margin: em(54px) 0;
+	padding: 0;
+  &_item{
+    @extend %item;
+    a{
+      @extend %link;
+      &:hover{
+        border-bottom: 1px solid $teal;
+        color: palette(black);
+      }
+    }
+    &-active{
+      @extend %item;
+      a{
+        @extend %link;
+        border-bottom: 1px solid $teal;
+        &:hover{
+          color: palette(black);
+        }
+      }
+    }
+  }
+}

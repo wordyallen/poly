@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+}
+
+.logo{
+  padding-top: em(30px);
+  display: block;
+  width: em(150px);
+  margin: auto;
+}
+
+.hamburger{
+  font-size: em(35px);
+  color: palette(grey);
+  cursor: pointer;
+}
+
+.container{
+  width:75%;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+	border-top: 1px solid palette(grey, xx-light);
+	p {
+		font-size: em(16px);
+		margin-top: em(22px, 16px) !important;
+	}
+}

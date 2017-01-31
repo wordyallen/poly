@@ -1,0 +1,52 @@
+body{
+  font-family: $fonts;
+}
+
+h3{
+  margin-top: em(22px);
+	margin-bottom: em(36px, 14px);
+	color: palette(grey, x-light);
+	text-transform: uppercase;
+	font-weight: $font-weight-medium;
+	font-size: em(14px);
+
+}
+
+h1{
+  font-weight: $font-weight-light;
+  font-size: em(42px);
+  color: palette(grey, x-dark);
+}
+
+h2{
+  font-family: $fonts-secondary;
+  font-weight: $font-weight-thin;
+  font-size: em(24px);
+  color: palette(grey, light);
+  // letter-spacing: $letter-space;
+}
+
+p{
+	font-size: em(18px);
+	line-height: (27px/18px);
+	font-weight: $font-weight-light;
+  color: palette(grey);
+}
+
+blockquote{
+	font-size: em(24px);
+	font-style: italic;
+	font-weight: $font-weight-light;
+	margin: em(32px, 24px) 0;
+	padding: 0 0 0 5%;
+  color: palette(grey);
+	border-left: solid em(8px, 24px) palette(grey, xx-light);
+}
+
+a {
+	color: $teal;
+	text-decoration: none;
+  &:hover{
+    color: $blue;
+  }
+}

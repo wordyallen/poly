@@ -1,0 +1,67 @@
+
+
+
+.grid {
+	@extend %clearfix;
+	@extend .centered;
+	margin-bottom: em(60px);
+	@include mq(large) {
+		max-width: $container-max;
+	}
+}
+
+
+@include mq(medium){
+  @for $i from 1 through $col-total{
+    $target:$column * $i + $gutter * ($i - 1);
+    .col-#{$i}{
+      width: percentage($target/$grid-context);
+    }
+  }
+}
+
+
+[class^="col-"] {
+	@include mq(small)  {
+		margin: em(12px) 0;
+	}
+	@include mq(medium) {
+		// target its immediate sibling with the same class:
+    &+&{
+      margin-left: percentage($gutter/$grid-context);
+    }
+    float: left;
+		padding: 0 10px;
+		margin: em(12px) 0;
+	}
+
+}
+
+
+
+
+$poly-grid: (
+	col-12 : #DEF4E5,
+	col-8  : #DCE0F2,
+	col-7  : #DCF0EF,
+	col-6  : #FFE3DB,
+	col-4  : #F8EDD0,
+	col-5  : #EAEBEC,
+	col-2  : #C5E2CE,
+	col-3  : #D6EEF5
+);
+
+
+
+
+// Generate Poly grid display classes
+
+@each $key, $value in $poly-grid {
+	.theme_poly  .#{$key} {
+		background: $value;
+		font-weight: $font-weight-thin;
+		color: palette(grey, light);
+		padding:em(20px) em(10px);
+
+	}
+}

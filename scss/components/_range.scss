@@ -1,0 +1,33 @@
+@mixin createRanges($color) {
+    margin: em(20px) 0;
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 16px;
+      width: 16px;
+      border-radius: 100%;
+      background: lighten($color, 10%);
+
+      margin-top: -6px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 5px;
+      background: $color;
+      border-radius: 3px;
+    }
+}
+
+@each $theme, $color in $ui-colors{
+  .#{$theme}-range{
+    @include createRanges($color);
+  }
+}

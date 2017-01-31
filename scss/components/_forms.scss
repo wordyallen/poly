@@ -1,0 +1,33 @@
+// Form elements
+
+input,
+textarea {
+	display: block;
+	padding: 15px;
+	width: 100%;
+	outline: 0;
+	border: 0;
+}
+
+input:focus,
+textarea:focus {
+	transition: $trns;
+}
+
+.form{
+  &_input{
+    width: 100%;
+    font-size: em(16px);
+    padding: em(15px);
+    margin-bottom: em(20px);
+    border-bottom: 6px solid palette(grey, x-light);
+    border-radius: $br;
+    background: palette(grey, xx-light);
+    color: palette(black, dark);
+    font-weight: $font-weight-light;
+    &:focus{
+      border-color: $teal;
+    }
+  }
+
+}

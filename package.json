@@ -1,0 +1,25 @@
+{
+  "name": "poly-start",
+  "version": "1.0.0",
+  "description": "Poly ",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass -w --include-path scss scss/application.scss css/application.css",
+    "deploy": "surge -d poly.surge.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wordyallen/poly-starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wordyallen/poly-starter/issues"
+  },
+  "homepage": "https://github.com/wordyallen/poly-starter#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^3.10.0"
+  }
+}

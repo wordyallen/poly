@@ -1,0 +1,46 @@
+// Clearfix
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.centered {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+.right{
+  text-align: right;
+}
+
+
+//pixel to em converter
+@function em($target, $context: 16px) {
+  @return ($target / $context) * 1em;
+};
+
+
+
+
+//media query
+@mixin mq($break) {
+  @if $break == small{
+    @media (min-width: $bp-sm) and (max-width: $bp-md){
+      @content;
+    }
+  } @else if $break == medium{
+    @media (min-width: $bp-md +1){
+      @content;
+    }
+  } @else if $break == large {
+      @media(min-width: $bp-lg){
+        @content;
+      }
+  } @else{
+    @error "No value for #{$break}";
+  }
+}
